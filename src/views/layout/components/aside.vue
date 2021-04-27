@@ -38,12 +38,12 @@ export default {
   methods: {
     saveActivePath(path) {
       this.activePath = path
-      localStorage.setItem('activePath', path)
+      sessionStorage.setItem('activePath', path)
     },
   },
   created() {
     this.menuList = this.$store.state.rightsList
-    this.activePath = localStorage.getItem('activePath')
+    this.activePath = window.sessionStorage.getItem('activePath')
   },
 }
 </script>

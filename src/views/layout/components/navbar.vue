@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     exit() {
-      localStorage.clear()
+      sessionStorage.clear()
       this.$router.push('/login')
       window.location.reload()
     },

@@ -7,8 +7,8 @@ const service = axios.create({
 
 //axios的拦截request
 service.interceptors.request.use((config) => {
-  if (localStorage.getItem('token')) {
-    config.header.token = localStorage.getItem('token')
+  if (sessionStorage.getItem('token')) {
+    config.header.token = sessionStorage.getItem('token')
   }
   return config
 }),

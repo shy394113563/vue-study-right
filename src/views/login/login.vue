@@ -34,7 +34,7 @@ export default {
           this.$store.commit('setUserName', res.data.user.username)
           this.$store.commit('setRightList', res.data.user.rights)
 
-          localStorage.setItem('token', res.data.user.token)
+          sessionStorage.setItem('token', res.data.user.token)
           initDynamicRoutes()
           this.$message.success('登录成功！！！')
           this.$router.push('/home')
